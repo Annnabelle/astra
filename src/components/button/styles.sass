@@ -1,0 +1,20 @@
+@import '../../styles/_typography'
+@import '../../styles/_variables'
+.btn
+    +typography(18px, 400, map-get($basic, 'white'))
+    background: map-get($main, 'main' )
+    padding: 12px
+    width: 220px
+    cursor: pointer
+    border: 1px solid map-get($main, 'main')
+    border-radius: 6px
+    transition: all 0.5s ease
+    display: flex
+    justify-content: center
+    align-items: center
+    column-gap: 10px
+    &:hover
+        background: transparent
+        color: map-get($main, 'main')
+    @media screen and (max-width: 650px)
+        font-size: 16px
