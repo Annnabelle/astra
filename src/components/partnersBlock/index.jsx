@@ -17,6 +17,9 @@ const PartnersBlock = (props) => {
   ];
   return (
     <div className='partnersBlockContainer'>
+      <div className='partnersTitle'>
+        <h3 className='title'>Наши партнеры</h3>
+      </div>
       <div className='container'>
         <Swiper
           spaceBetween={20}

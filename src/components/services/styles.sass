@@ -1,0 +1,25 @@
+@import '../../styles/_typography'
+@import '../../styles/_variables'
+.services
+    padding: 30px 0
+    .servicesContainer
+        display: flex
+        flex-direction: column
+        row-gap: 30px
+        .servicesHeading
+            display: flex
+            justify-content: space-between
+            align-items: center
+            .headingTitle
+                .title
+                    +typography(32px, 600, map-get($basic, 'black'))
+                    @media screen and (max-width: 550px)
+                        font-size: 24px
+            .headingSeeMore
+                .seeMore
+                    transition: all 0.5s ease
+                    +typography(18px, 600, map-get($basic, 'black'))
+                    @media screen and (max-width: 550px)
+                        font-size: 14px
+                    &:hover
+                        color: map-get($main, 'main')

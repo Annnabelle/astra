@@ -1,6 +1,7 @@
 import Header from "./components/header";
 import Hero from "./components/hero";
 import PartnersBlock from "./components/partnersBlock";
+import Services from "./components/services";
 
 const App = () => {
   return (
@@ -8,6 +9,7 @@ const App = () => {
       <Header/>
       <Hero/>
       <PartnersBlock/>
+      <Services/>
     </div>
   );
 }
