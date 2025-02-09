@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import logo from "../../assets/astraLogo.webp";
 import NavBar from "./navBar/index.jsx";
 import Button from "../button";
@@ -6,13 +6,26 @@ import "./styles.sass";
 
 const Header = () => {
   const [burgerIsOpen, setBurgerIsOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 50);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   const toggleMenu = (toOpen) => {
     setBurgerIsOpen(toOpen);
   };
 
   return (
-    <header className={`header  ${burgerIsOpen ? "activeHeader" : ""}`}>
+    <header className={`header  ${burgerIsOpen ? "activeHeader" : ""} ${scrolled ? "scrolled" : ""}`}>
       <div className=' container'>
         <div className='headerItems'>
           <div className='headerItem'>
