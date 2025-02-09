@@ -1,3 +1,4 @@
+import Cases from "./components/cases";
 import Header from "./components/header";
 import Hero from "./components/hero";
 import PartnersBlock from "./components/partnersBlock";
@@ -12,6 +13,7 @@ const App = () => {
       <PartnersBlock/>
       <Services/>
       <StaticBlock/>
+      <Cases/>
     </div>
   );
 }
