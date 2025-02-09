@@ -1,0 +1,32 @@
+@import '../../../styles/_typography'
+@import '../../../styles/_variables'
+.footerContactUs
+    padding: 0 0 50px 0
+    .footerContactUsContainer
+        display: flex
+        align-items: start
+        flex-direction: row
+        justify-content: space-between
+        @media screen and (max-width: 600px)
+            flex-direction: column
+            row-gap: 20px
+        .footerContactUsItem
+            display: flex
+            flex-direction: column
+            row-gap: 10px
+            .itemTitle
+                .title
+                    +typography(25px, 600, map-get($basic, "black"))
+                    @media screen and (max-width: 991px)
+                        font-size: 20px
+            .itemContactIcons
+                display: flex
+                column-gap: 20px
+                .itemIcon
+                    .link
+                        svg
+                            color: map-get($main, 'textBlack')
+                            font-size: 32px
+                            transition: all 0.5s ease
+                            &:hover
+                                color: map-get($main, "main")

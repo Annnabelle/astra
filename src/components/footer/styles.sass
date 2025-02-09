@@ -1,0 +1,35 @@
+@import '../../styles/_typography'
+@import '../../styles/_variables'
+.footer
+    padding: 50px 0
+    .footerItemsContainer
+        display: flex
+        align-items: start
+        justify-content: space-between
+        flex-wrap: wrap
+        gap: 30px
+        .footerItem
+            display: flex
+            flex-direction: column
+            row-gap: 20px
+            align-items: start
+            .itemLogo
+                .img
+                    width: 100%
+            .itemDescription
+                max-width: 500px
+                width: 100%
+                .description
+                    +typography(18px, 500, map-get($main, "textBlack"))
+            .itemTitle
+                .title
+                    +typography(18px, 700, map-get($basic, "black"))
+            .footerLinks
+                display: flex
+                flex-direction: column
+                row-gap: 10px
+                .link
+                    transition: all 0.5s ease
+                    +typography(18px, 400, map-get($main, "textBlack"))
+                    &:hover
+                        color: map-get($main, "main")
