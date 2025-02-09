@@ -1,0 +1,47 @@
+@import '../../styles/_typography'
+@import '../../styles/_variables'
+.staticBlock
+    position: relative
+    .staticBg
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        .img
+            width: 100%
+            height: 100%
+            object-fit: cover
+    .staticContainer
+        padding: 100px 0
+        position: relative
+        z-index: 1
+        display: flex
+        align-items: center
+        justify-content: center
+        margin: auto
+        column-gap: 50px
+        @media screen and (max-width: 550px)
+            flex-direction: column
+            row-gap: 30px
+            padding: 50px 0
+        .staticItem
+            display: flex
+            flex-direction: column
+            align-items: center
+            justify-content: center
+            .itemTitle
+                .title
+                    +typography(64px, 700, map-get($basic, 'white'))
+                    @media screen and (max-width: 1250px)
+                        font-size: 52px
+                    @media screen and (max-width: 865px)
+                        font-size: 24px
+            .itemSubtitle
+                .subtitle
+                    text-align: center
+                    +typography(32px, 600, map-get($basic, "white"))
+                    @media screen and (max-width: 1250px)
+                        font-size: 28px
+                    @media screen and (max-width: 865px)
+                        font-size: 18px
