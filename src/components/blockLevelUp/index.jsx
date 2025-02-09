@@ -1,5 +1,6 @@
 import React from "react";
 import Button from "../button";
+import levelUpBg from "../../assets/levelUpBg.webp";
 import "./styles.sass";
 
 const BlockLevelUp = () => {
@@ -7,8 +8,9 @@ const BlockLevelUp = () => {
     <div className='blockLevelUp'>
       <div className='blockBgImage'>
         <img
-          src=''
-          alt=''
+          src={levelUpBg}
+          alt='levelUpBg'
+          className='img'
         />
       </div>
       <div className='blockLevelUpContainer'>

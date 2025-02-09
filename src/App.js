@@ -1,3 +1,4 @@
+import BlockLevelUp from "./components/blockLevelUp";
 import Cases from "./components/cases";
 import Header from "./components/header";
 import Hero from "./components/hero";
@@ -14,6 +15,7 @@ const App = () => {
       <Services/>
       <StaticBlock/>
       <Cases/>
+      <BlockLevelUp/>
     </div>
   );
 }
